@@ -4,6 +4,7 @@ A small order management app in plain PHP, PDO and MySQL, used as the "existing 
 
 ## Layout
 - `public/`: the web root (document root). Only this folder is served.
+- `.htaccess`: for shared hosting (Apache or LiteSpeed) where the document root cannot point at `public/`; it serves `public/` and blocks everything else.
 - `app/`: application code, outside the web root.
 - `config.php`: database credentials, outside the web root, never committed (copy `config.example.php`).
 - `logs/php-error.log`: PHP warnings and deprecations (written by `app/bootstrap.php`).

@@ -8,6 +8,7 @@ A small order management app in plain PHP, PDO and MySQL, used as the "existing 
 - `app/`: application code, outside the web root.
 - `config.php`: database credentials, outside the web root, never committed (copy `config.example.php`).
 - `logs/php-error.log`: PHP warnings and deprecations (written by `app/bootstrap.php`).
+- `sessions/`: PHP session files, kept with the app so a PHP version switch on the host keeps people logged in.
 - `database/schema.sql`, `database/seed.sql`: tables and demo data (the seed holds the demo-only admin login; change that password on any server that is reachable from the internet).
 
 ## Run locally

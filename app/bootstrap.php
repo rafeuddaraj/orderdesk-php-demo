@@ -11,7 +11,10 @@ ini_set('log_errors', '1');
 ini_set('error_log', APP_ROOT . '/logs/php-error.log');
 error_reporting(E_ALL);
 
+// Sessions live with the app, so a PHP version switch on the host does not log everyone out.
 session_start([
+    'save_path' => APP_ROOT . '/sessions',
+    'gc_maxlifetime' => 604800,
     'cookie_httponly' => true,
     'cookie_samesite' => 'Lax',
 ]);

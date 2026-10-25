@@ -1,7 +1,7 @@
 <?php
 // Order queries.
 
-function find_orders(PDO $db, string $status = null)
+function find_orders(PDO $db, ?string $status = null)
 {
     if ($status === null) {
         return $db->query('SELECT * FROM orders ORDER BY created_at DESC')->fetchAll();

@@ -15,6 +15,7 @@ error_reporting(E_ALL);
 session_start([
     'save_path' => APP_ROOT . '/sessions',
     'gc_maxlifetime' => 604800,
+    'gc_probability' => 1, // Ubuntu sets 0 and its cron job only cleans its own folder
     'cookie_httponly' => true,
     'cookie_samesite' => 'Lax',
 ]);
